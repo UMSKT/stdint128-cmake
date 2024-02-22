@@ -22,7 +22,7 @@
 
 cmake_minimum_required(VERSION 3.12)
 
-project(stdint128 VERSION 1.0.0 LANGUAGES CXX)
+project(stdint128 VERSION 1.0.1 LANGUAGES CXX)
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindInt128.cmake)
 FIND_INT128_TYPES()

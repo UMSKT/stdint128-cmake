@@ -26,6 +26,9 @@
 #define __STDINT128__
 
 // check the results of FIND_INT128_TYPES()
+#ifndef HAVE_INT128BUILTIN
+#define HAVE_INT128BUILTIN
+#endif
 #if !defined(HAVEuint128_t)
 #if defined(HAVEuint128_as_u_long_long)
 typedef unsigned long long uint128_t;
@@ -44,6 +47,9 @@ typedef unsigned __int128 uint128_t
 #elif defined(HAVEunsignedint128)
 typedef unsigned int128 uint128_t;
 #else
+#ifdef HAVE_INT128BUILTIN
+#undef HAVE_INT128BUILTIN
+#endif
 //#if defined(_MSC_VER)
 //#include <intrin.h>
 //#endif
@@ -55,6 +61,9 @@ typedef struct uint128_t {
 #endif
 #endif // !defined(HAVEuint128_t)
 
+#ifndef HAVE_UINT128BUILTIN
+#define HAVE_UINT128BUILTIN
+#endif
 #if !defined(HAVEint128_t)
 #if defined(HAVE__int128_t)
 typedef __int128_t int128_t;
@@ -65,6 +74,9 @@ typedef __int128 int128_t;
 #elif defined(HAVEint128)
 typedef int128 int128_t;
 #else
+#ifdef HAVE_UINT128BUILTIN
+#undef HAVE_UINT128BUILTIN
+#endif
 //#if defined(_MSC_VER)
 //#include <intrin.h>
 //#endif
