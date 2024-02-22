@@ -95,7 +95,7 @@ MACRO(FIND_INT128_TYPES)
     endif()
 
   else()
-    message("Compiler/platform support for 128 bit integers not found, falling back to ReactOS Intrinsics implementation.")
+    message("Compiler/platform support for 128 bit integers not found, falling back to struct definition.")
     set(INT128_FLAGS "")
   endif()
 
@@ -117,7 +117,7 @@ MACRO(FIND_INT128_TYPES)
     endif()
 
   else()
-    message("Compiler/platform support for unsigned 128 bit integers not found, falling back to ReactOS Intrinsics implementation.")
+    message("Compiler/platform support for unsigned 128 bit integers not found, falling back to struct definition.")
   endif()
 
 endmacro()

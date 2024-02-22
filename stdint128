@@ -48,11 +48,9 @@ using uint128_t = unsigned int128;
 //#include <intrin.h>
 //#endif
 #include <cstdint>
-using uint128_t = union {
-    uint8_t u8[16];
-    uint16_t u16[8];
-    uint32_t u32[4];
-    uint64_t u64[2];
+using uint128_t = struct {
+    uint64_t hi;
+    uint64_t lo;
 };
 #endif
 #endif // !defined(HAVEuint128_t)
@@ -71,11 +69,9 @@ using int128_t = int128;
 //#include <intrin.h>
 //#endif
 #include <cstdint>
-using int128_t = union {
-    int8_t i8[16];
-    int16_t i16[8];
-    int32_t i32[4];
-    int64_t i64[2];
+using int128_t = struct {
+    int64_t hi;
+    int64_t lo;
 };
 #endif
 #endif // !defined(HAVEint128_t)

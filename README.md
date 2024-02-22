@@ -1,7 +1,7 @@
 # stdint128-cmake
 standardized implementation of [u]int128_t
 
-selects a compiler specific builtin implementation of 128bit integers or defines a union of integers if a builtin is not supported.
+selects a compiler specific builtin implementation of 128bit integers or defines a struct if a builtin is not supported.
 
 TODO: use actual intrinsics for when a builtin is not provided
 

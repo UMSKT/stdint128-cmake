@@ -48,11 +48,9 @@ typedef unsigned int128 uint128_t;
 //#include <intrin.h>
 //#endif
 #include <stdint.h>
-typedef union uint128_t {
-    uint8_t u8[16];
-    uint16_t u16[8];
-    uint32_t u32[4];
-    uint64_t u64[2];
+typedef struct uint128_t {
+    uint64_t hi;
+    uint64_t lo;
 };
 #endif
 #endif // !defined(HAVEuint128_t)
@@ -71,11 +69,9 @@ typedef int128 int128_t;
 //#include <intrin.h>
 //#endif
 #include <stdint.h>
-typedef union int128_t {
-    int8_t i8[16];
-    int16_t i16[8];
-    int32_t i32[4];
-    int64_t i64[2];
+typedef struct int128_t {
+	int64_t hi;
+	int64_t lo;
 };
 #endif
 #endif // !defined(HAVEint128_t)

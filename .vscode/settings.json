@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "stdint128": "cpp"
-    }
+    },
+    "cmake.configureOnOpen": false
 }
