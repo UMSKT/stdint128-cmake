@@ -5,18 +5,19 @@ selects a compiler specific builtin implementation of 128bit integers or defines
 
 TODO: use actual intrinsics for when a builtin is not provided
 
-##Usage
+## Usage
 
-###CMakeLists.txt
+### CMakeLists.txt
 ```cmake
 CPMAddPackage(
         NAME stdint128
-        GITHUB_REPOSITORY UMSKT/stdint128
+        GITHUB_REPOSITORY UMSKT/stdint128-cmake
+        GIT_TAG v1.0.0
         VERSION 1.0.0
 )
 ```
 
-###C++
+### C++
 ```C++
 
 #include <stdint128>
@@ -25,7 +26,7 @@ CPMAddPackage(
 
 ```
 
-###C
+### C
 ```C
 #include <stdint128.t>
 
